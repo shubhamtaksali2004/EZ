@@ -8,7 +8,7 @@ export default function Navbar() {
     <nav className="navbar">
       {/* Logo */}
       <img
-        src="/Hero/VFilms.png"
+        src="/VFilms.png"
         alt="Varun Tyagi Logo"
         className="logo"
       />
