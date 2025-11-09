@@ -1,0 +1,193 @@
+/* Custom Fonts */
+
+/* ================================ */
+/* HERO SECTION */
+/* ================================ */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    padding: 2.5rem 1.5rem; 
+    /* Using the background image path provided earlier */
+    background: url('images/bg.png') center/cover no-repeat;
+}
+
+@media (min-width: 768px) { 
+    .hero-section {
+        padding-left: 3rem; 
+        padding-right: 3rem; 
+    }
+}
+
+/* ================================ */
+/* PAPER NOTE */
+/* ================================ */
+.paper-note-container {
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    max-width: 340px; 
+    transform: rotate(-4deg); 
+    z-index: 20;
+}
+
+.paper-note-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1)); 
+}
+
+@media (min-width: 768px) {
+    .paper-note-container {
+        max-width: 400px; 
+    }
+}
+
+/* ================================ */
+/* INDIA GATE */
+/* ================================ */
+.india-gate-img {
+    position: absolute;
+    bottom: 12%;
+    left: 9%;
+    width: 180px; 
+    opacity: 0.95;
+}
+
+@media (min-width: 768px) {
+    .india-gate-img {
+        width: 220px; 
+    }
+}
+
+/* ================================ */
+/* SILHOUETTES GROUP (Correct Size and Position) */
+/* ================================ */
+.silhouettes-group-container {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px; 
+    z-index: 10;
+}
+
+.silhouettes-group-img {
+    width: 45%; 
+    max-width: 450px; 
+    margin: 0 auto;
+    /* Shifts the image slightly to the right */
+    transform: translateX(2rem); 
+}
+
+@media (min-width: 768px) {
+    .silhouettes-group-container {
+        margin-top: 150px; 
+    }
+    .silhouettes-group-img {
+        width: 30%; 
+        transform: translateX(3rem); 
+    }
+}
+
+/* ================================ */
+/* ARROWS & LABELS (PERFECTED FINAL POSITIONING) */
+/* ================================ */
+.label {
+    position: absolute;
+    font-style: italic;
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive; 
+    color: #1c2b4a;
+}
+
+.arrow {
+    position: absolute;
+    width: 100px;
+}
+
+/* Film Makers: Final stable position */
+.film-makers-label {
+    top: 18%; 
+    right: 40%; 
+}
+.film-makers-arrow {
+    top: 25%; 
+    right: 40%; 
+}
+
+/* Branding experts: Pulled in tighter to the silhouette */
+.branding-experts-label {
+    top: 60%; 
+    right: 65%; /* Pulled inward (was 65%) */
+    font-size: 20px; 
+}
+.branding-experts-arrow {
+    top: 50%; 
+    right: 65%; /* Pulled inward (was 60%) */
+}
+
+/* Art Creators: Adjusted arrow start point higher for a better curve/angle */
+.art-creators-label {
+    top: 18%; 
+    right: 15%; 
+}
+.art-creators-arrow {
+    top: 25%; /* Pushed up (was 25%) to start the curve higher */
+    right: 20%; 
+}
+/* ================================ */
+/* BOTTOM CONTENT & BUTTON (HIGH Z-INDEX) */
+/* ================================ */
+.bottom-content-container {
+    position: absolute;
+    bottom: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 30; 
+}
+
+.bottom-text {
+    color: #3b3b3b;
+    font-size: 20px; 
+    margin-bottom: 1rem; 
+    font-family: serif;
+}
+
+@media (min-width: 640px) { 
+    .bottom-text {
+        font-size: 24px; 
+    }
+}
+
+@media (min-width: 768px) { 
+    .bottom-text {
+        font-size: 26px; 
+    }
+}
+
+.portfolio-button {
+    background-color: #e76b45; 
+    color: white;
+    font-weight: 500; 
+    padding: 0.5rem 1.5rem; 
+    border-radius: 9999px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); 
+    transition: background-color 0.3s ease; 
+    border: none;
+    cursor: pointer;
+}
+
+.portfolio-button:hover {
+    background-color: #c75a38; 
+}

@@ -1,0 +1,64 @@
+/* --- your existing CSS --- */
+.footer-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fdebe7;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 80px;
+}
+
+/* ... (everything else you already have) ... */
+
+/* Contact info below button */
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: 15px;
+  font-size: 15px;
+  color: #e85d3f;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+
+  .footer-right {
+    margin-top: 40px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .top-vector,
+  .bottom-vector {
+    width: 200px;
+  }
+}
+
+/* ✅ Add this at the end */
+.form-status {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #e85d3f;
+}

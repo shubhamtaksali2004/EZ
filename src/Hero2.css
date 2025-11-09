@@ -1,0 +1,167 @@
+/* Optional: import a cursive font for the headline (internet required).
+   If you don't want external fonts, remove the @import line and the .headline-font family will fallback. */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap');
+
+:root{
+  --bg:#f6dfd7;   /* base pink */
+  --accent:#c86a4e; /* orange-ish */
+  --text:#16303b; /* dark-blue/charcoal for headings */
+}
+
+/* outer container - full height hero */
+.hero-wrapper{
+  min-height: 100vh;
+  background: url('images/bg.png') center/cover no-repeat; /* if you have texture bg, otherwise fallback color */
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+/* center inner content and keep max width */
+.hero-inner{
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* left column */
+.hero-left{
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* mandala wrapper to allow precise positioning of logo box */
+/* Mandala image */
+.mandala {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: auto;
+filter: brightness(0) saturate(100%) invert(88%) sepia(30%) 
+        saturate(650%) hue-rotate(320deg) brightness(105%) contrast(95%);
+opacity: 0.9;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+/* Logo box centered over mandala */
+.logo-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255,255,255,0);
+  border: 2px solid rgba(30,80,90,0.1);
+  z-index: 2;
+}
+
+/* V Films logo */
+.logo-img {
+  width: 140px;   /* smaller width */
+  height: auto;
+  display: block;
+}
+
+/* right column */
+.hero-right{
+  flex: 1 1 55%;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: var(--text);
+}
+
+/* headline - use cursive/italic style like reference */
+.hero-headline{
+  font-family: 'Great Vibes', 'Playfair Display', Georgia, serif;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.05;
+  color: #1e3b42; /* deep slightly-blue color */
+  margin: 0 0 18px;
+  letter-spacing: .6px;
+  padding-bottom: 20px;
+}
+
+/* subhead */
+.hero-subhead{
+  color: var(--accent);
+  font-family: Georgia, 'Playfair Display', serif;
+  font-size: 18px;
+  margin-bottom: 22px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* paragraph */
+.hero-text{
+  margin: 0 auto;
+  max-width: 420px;  /* narrow column like reference */
+  color: #2b2b2b;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 15px;
+  line-height: 1.8;
+  padding-top: 10px;
+}
+
+/* small desktop tweaks to better match proportions */
+@media (min-width: 1200px){
+  .mandala-wrap{ width: 540px; height:540px; }
+  .logo-img{ width: 340px; }
+  .hero-headline{ font-size: 56px; }
+  .hero-text{ max-width: 520px; font-size: 16px; }
+}
+
+/* Responsive: stack columns on narrow screens */
+@media (max-width: 900px){
+  .hero-inner{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-left, .hero-right{
+    flex: none;
+    width: 100%;
+  }
+
+  .mandala-wrap{
+    width: 420px;
+    height: 420px;
+    margin-bottom: 1rem;
+  }
+
+  .logo-box{
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -52%);
+  }
+
+  .logo-img{ width: 300px; }
+
+  .hero-headline{ font-size: 32px; }
+  .hero-subhead{ font-size: 16px; }
+  .hero-text{ max-width: 90%; font-size: 15px; }
+}
+
+/* Mobile smaller */
+@media (max-width: 480px){
+  .mandala-wrap{ width: 300px; height:300px; }
+  .logo-img{ width: 220px; }
+  .hero-headline{ font-size: 26px; }
+  .hero-text{ font-size: 14px; line-height:1.7; }
+  .hero-wrapper{ padding: 1.2rem; }
+}

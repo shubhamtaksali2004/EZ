@@ -1,0 +1,258 @@
+/* ================================ */
+/* BASE SECTION STYLES */
+/* ================================ */
+/* ================================ */
+/* TOP CORNER LOGO */
+/* ================================ */
+.logo-corner {
+    /* Position absolutely relative to the .about-section parent */
+    position: absolute;
+    top: 2rem;
+    /* Move down from the top edge (matches padding/design) */
+    left: 2rem;
+    /* Move right from the left edge (matches padding/design) */
+    width: 60px;
+    /* Adjust size as needed, 60px is a good starting point */
+    height: auto;
+    z-index: 1000;
+    /* Ensure it is on top of everything */
+}
+
+@media (min-width: 768px) {
+    .logo-corner {
+        top: 4rem;
+        left: 4rem;
+    }
+}
+
+.about-section {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 1.5rem;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background: url('images/bg.png') center/cover no-repeat;
+    /* if you have texture bg, otherwise fallback color */
+
+}
+
+@media (min-width: 768px) {
+    .about-section {
+        flex-direction: row;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+/* ================================ */
+/* LEFT SIDE CONTENT */
+/* ================================ */
+.content-left {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .content-left {
+        width: 50%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+/* Heading */
+.heading-main {
+    color: #2c2c2c;
+    font-size: 22px;
+    font-family: serif;
+    margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+    .heading-main {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 768px) {
+    .heading-main {
+        font-size: 30px;
+    }
+}
+
+/* Paragraph - TEXT WRAPPING FIX maintained */
+.paragraph-main {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .paragraph-main {
+        margin-left: 0;
+        margin-right: 50px;
+        max-width: 350px;
+    }
+}
+
+/* ================================ */
+/* STATS CARDS (Overlap Maintained) */
+/* ================================ */
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .stats-container {
+        justify-content: flex-start;
+    }
+}
+
+.stat-card {
+    position: relative;
+    background-color: #f5e8c8;
+    width: 180px;
+    height: 180px;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -40px;
+}
+
+.stat-card:first-child {
+    margin-left: 0;
+    z-index: 3;
+}
+
+.stat-card-2 {
+    z-index: 2;
+}
+
+.stat-card-3 {
+    z-index: 1;
+}
+
+/* Specific rotation classes for cards */
+.stat-card-1,
+.stat-card-2 {
+    transform: rotate(5deg);
+}
+
+.stat-card-3 {
+    transform: rotate(6deg);
+}
+
+.stat-number {
+    color: #1b3c70;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.stat-label {
+    color: #d46a42;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+}
+
+/* ================================ */
+/* RIGHT SIDE CONTENT - QUOTE TEXT FIX 🎯 */
+/* ================================ */
+.content-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .content-right {
+        width: 50%;
+        align-items: flex-end;
+        text-align: right;
+        position: relative;
+        z-index: 10;
+        /* UPDATED: Increased min-height for better absolute positioning control */
+        min-height: 700px;
+    }
+}
+
+/* Script Font Quote (Positioning adjusted) */
+.quote-text {
+    color: #1c2b4a;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    line-height: 1.9;
+    max-width: 550px;
+    margin-bottom: 2.5rem;
+}
+
+@media (min-width: 768px) {
+    .quote-text {
+        font-size: 20px;
+        position: absolute;
+        /* UPDATED: Move down from -300px to -150px */
+        top: 200px;
+        /* UPDATED: Shift left slightly from 0 to -50px */
+        right: 40px;
+        margin: 0;
+        /* UPDATED: Increased max-width for desired line breaks */
+        max-width: 500px;
+        z-index: 100;
+        text-align: center;
+    }
+}
+
+/* Brand Curve Image (Logos) - Maintained */
+.brand-curve-img {
+    width: 500px;
+}
+
+@media (min-width: 768px) {
+    .brand-curve-img {
+        position: absolute;
+        bottom: -50px;
+        right: -100px;
+        width: 700px;
+        max-width: unset;
+        z-index: 1;
+    }
+}
+
+/* Mountain Illustration Image - Maintained */
+.mountain-img {
+    position: relative;
+    width: 260px;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .mountain-img {
+        position: absolute;
+        bottom: 0px;
+        right: 80px;
+        width: 420px;
+        z-index: 2;
+    }
+}

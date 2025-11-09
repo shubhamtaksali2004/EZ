@@ -1,0 +1,115 @@
+/* Base Styles */
+.services-section {
+  width: 100vw;
+  overflow: hidden;
+  padding: 4rem 0;
+  text-align: center;
+  font-family: Arial, sans-serif; 
+    background: url('images/bg.png') center/cover no-repeat; /* if you have texture bg, otherwise fallback color */
+
+}
+
+/* Heading */
+.section-heading {
+  color: #1b2c47;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 24px; 
+  margin: 0;
+}
+
+/* Medium screens and up */
+@media (min-width: 768px) { 
+  .section-heading {
+    font-size: 32px;
+  }
+}
+
+.brush-stroke-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem; 
+  margin-bottom: 2.5rem; 
+}
+
+.brush-stroke-img {
+  width: 380px;
+  height: auto;
+}
+
+@media (min-width: 768px) { 
+  .brush-stroke-img {
+    width: 600px;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5rem; 
+  margin-bottom: 5rem; 
+}
+
+/* Service Card Base Styles */
+.service-card {
+  position: relative;
+  width: 270px; 
+  /* box-shadow: 0 0 0 10px, 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);  */
+  border-radius: 0; 
+  padding-bottom: 2rem; 
+  display: block;
+  transition: transform 300ms ease-in-out;
+  text-decoration: none; 
+  color: inherit;
+}
+
+/* Hover Effect */
+.service-card:hover {
+  transform: scale(1.05); 
+}
+
+/* Card Rotations */
+.card-1 {
+  transform: rotate(2deg); 
+}
+.card-2 {
+  transform: rotate(-1.5deg); 
+  margin-top: 50px;
+}
+.card-3 {
+  transform: rotate(-2deg); 
+}
+
+/* Card Image */
+.card-image {
+  width: 100%;
+  height: 350px; 
+  object-fit: cover;
+  display: block;
+}
+
+/* --- TAPE POSITION CORRECTIONS START HERE --- */
+.card-tape {
+  position: absolute;
+  width: 130px; 
+  opacity: 1; 
+  z-index: 20; 
+  top: -1rem; 
+}
+
+/* Tape 1: Film Production */
+.card-tape-1 {
+  left: 0.25rem; 
+  transform: rotate(-10deg); 
+}
+
+/* Tape 2: Branding */
+.card-tape-2 {
+  left: 50%; 
+  transform: translateX(-50%) rotate(-25deg); 
+}
+
+.card-tape-3 {
+    transform: rotate(30deg);
+}

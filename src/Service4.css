@@ -1,0 +1,197 @@
+/* ===== Base Section ===== */
+.film-production-section {
+  min-height: 100vh;
+  position: relative;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+        background: url('images/bg.png') center/cover no-repeat;
+
+}
+
+/* ===== Back Button ===== */
+.back-button {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.4rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #fff2e6;
+}
+
+.back-icon {
+  width: 40px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .back-icon {
+    width: 60px;
+  }
+}
+
+/* ===== Quote Section ===== */
+.quote-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.quote-text {
+  font-size: 1.1rem;
+  color: #444;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .quote-text {
+    font-size: 1.3rem;
+  }
+}
+
+.quote-author {
+  font-weight: 600;
+  color: #222;
+}
+
+.underline-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.underline-img {
+  width: 280px;
+}
+
+@media (min-width: 768px) {
+  .underline-img {
+    width: 600px;
+  }
+}
+
+/* ===== Main Section ===== */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+/* ===== Image Box ===== */
+.image-box img {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .image-box img {
+    width: 320px;
+  }
+}
+
+/* ===== Text Box ===== */
+.text-box {
+  max-width: 420px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.text-box p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.list-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.craft-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.craft-list li {
+  margin-bottom: 0.3rem;
+}
+
+/* ===== Explore Section ===== */
+.explore-section {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.explore-text {
+  color: #ff6600;
+  font-weight: 600;
+  cursor: pointer;
+  transition: text-decoration 0.3s;
+}
+
+.explore-text:hover {
+  text-decoration: underline;
+}
+
+.explore-arrow {
+  width: 80px;
+  height: auto;
+  margin-top: 0.5rem;
+  animation: bounce 1.5s infinite;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ===== Decorative Icons ===== */
+.decor-icon {
+  position: absolute;
+  opacity: 0.8;
+}
+
+.icon-tripod {
+  bottom: 80px;
+  right: 50px;
+  width: 110px;
+}
+
+.icon-camera1 {
+  top: 15%;
+  right: 40px;
+  width: 120px;
+}
+
+.icon-camera2 {
+  bottom: 180px;
+  right: 100px;
+  width: 90px;
+}
